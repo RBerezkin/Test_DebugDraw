@@ -1,7 +1,7 @@
 extends MeshInstance
 
 
-const DebugDraw = preload("res://scripts/debug_draw_3d.gd")
+const DebugDraw = preload("res://scripts/debug_draw/debug_draw_3d.gd")
 
 var rot_speed: float = 50.0
 var debug_draw: DebugDraw3D
