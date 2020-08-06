@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scripts/child.gd" type="Script" id=1]
+[ext_resource path="res://scripts/root.gd" type="Script" id=2]
+
+[sub_resource type="CubeMesh" id=1]
+size = Vector3( 0.5, 0.5, 0.5 )
+
+[sub_resource type="CapsuleMesh" id=2]
+radius = 0.2
+mid_height = 0.5
+radial_segments = 32
+
+[node name="Game" type="Spatial"]
+
+[node name="Root" type="MeshInstance" parent="."]
+mesh = SubResource( 1 )
+material/0 = null
+script = ExtResource( 2 )
+
+[node name="Child" type="MeshInstance" parent="Root"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0 )
+mesh = SubResource( 2 )
+material/0 = null
+script = ExtResource( 1 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 0.711439, -0.41552, 0.566742, 0, 0.806466, 0.59128, -0.702748, -0.42066, 0.573752, 2.26481, 2.36286, 2.29282 )
