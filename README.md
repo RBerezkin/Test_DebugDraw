@@ -14,12 +14,12 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
   # first add all the shapes you need to draw
-	debug_draw.add_vector(Vector3.ZERO, Vector3.UP, 0, Color.green)
-	debug_draw.add_vector(Vector3.ZERO, Vector3.RIGHT, 0, Color.red)
-	debug_draw.add_vector(Vector3.ZERO, Vector3.FORWARD, 0, Color.blue)
+  debug_draw.add_vector(Vector3.ZERO, Vector3.UP, 0, Color.green)
+  debug_draw.add_vector(Vector3.ZERO, Vector3.RIGHT, 0, Color.red)
+  debug_draw.add_vector(Vector3.ZERO, Vector3.FORWARD, 0, Color.blue)
   
   # then call draw method
-	debug_draw.draw()
+  debug_draw.draw()
 ```
 ## Supported primitives
 ### Ray
